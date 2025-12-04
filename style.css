@@ -1,0 +1,84 @@
+:root {
+    --gray: #f2f1f4;
+    --white: #ffffff;
+    --black: #000000;
+    --uutinen: #252525;
+
+    * {
+        color: var(--fontColor);
+    }
+}
+
+body {
+    background-color: var(--bg);
+
+    padding: 0;
+    margin: 0;
+}
+
+header {
+    background-color: var(--uutinenbg);
+
+    width: 100%;
+    height: 50px;
+
+    display: flex;
+    justify-content: flex-end; 
+    align-items: center;       
+    box-sizing: border-box;
+    padding-right: 12px;
+
+    position: sticky;
+    top: 0;
+    z-index: 999;
+}
+
+.light-theme {
+    --fontColor: var(--black);
+    --uutinenbg: var(--white);
+    --bg: var(--gray);
+}
+
+.dark-theme {
+    --fontColor: var(--white);
+    --uutinenbg: var(--uutinen);
+    --bg: var(--black);
+}
+
+.uutiset {
+    column-width: 350px;
+    column-gap: 5px;
+
+    padding: 5px;
+}
+
+a {    
+    color: black;
+    text-decoration: none;
+}
+
+.uutinen {
+    background-color: var(--uutinenbg);
+    display: inline-block;
+
+    margin-bottom: 5px;
+}
+
+.uutinen:hover {
+    box-shadow: 0 0 11px rgb(33, 33, 33, 0.2);
+}
+
+img {
+    width: 100%;
+}
+
+h2, p {
+    font-family: 'Montserrat', sans-serif;
+    padding-left: 10px;
+    padding-right: 10px; 
+}
+
+#darkModeToggle {
+    all: unset;
+    cursor: pointer;
+}

@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="fi">
+<head>
+    <script>
+        if (localStorage.getItem("darkMode") == true) {
+            document.body.classList.add("dark-theme");
+        }
+    </script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Lexend+Deca:wght@100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <script src="index.js" defer></script>
+    <title>Uutiskortti</title>
+</head>
+<body class="light-theme">
+    <script>
+        let darkMode = localStorage.getItem("darkMode");
+        if(darkMode == "true") {
+            document.body.classList.add("dark-theme");
+        }
+    </script>
+    <header>
+        <nav aria-label="Primary navigation">
+            <button id="darkModeToggle" aria-label="Toggle dark mode">
+                <img id="darkModeToggle-icon" src="assets/dark_mode.svg" alt="" width="32" height="32">
+            </button>
+        </nav>
+    </header>
+
+    <main>
+        <section class="uutiset">
+            <a href="#">
+                <article class="uutinen">
+                    <img src="https://images.cdn.yle.fi/image/upload/ar_1.4998075,c_fill,g_faces,h_424,w_636/dpr_2.0/q_auto:eco/f_auto/fl_lossy/v1637854842/39-884230619fae59d18cc" alt="Ralf Rangick">
+                    <h2>Pystyykö Ralf Rangnick pelastamaan Manchester Unitedin floppikauden? Media kaivoi heti esiin uuden valmentajan takavuosien lausunnot Paul Pogbasta</h2>
+                    <p>Manchester United tiedotti maanantaina Ralf Rangnickin aloittavan seuran uutena managerina. Ole Gunnar Solskjärin korvaava saksalainen on usean nykyisen huippuvalmentajan esikuva ja pelitapaprofessori.</p>
+                </article>
+            </a>
+        
+            <a href="#">
+                <article class="uutinen">
+                    <img src="https://images.cdn.yle.fi/image/upload/ar_1.5,c_fill,g_faces,h_424,w_636/dpr_2.0/q_auto:eco/f_auto/fl_lossy/v1763893681/39-15580906922d8886b11d" alt="Bengt Holmström">
+                    <h2>Nobelisti Bengt Holmström sanoo suoraan: EU säätelee itsensä hengiltä – ”Tilanne on katastrofaalinen”</h2>
+                    <p>Taloustieteilijä Bengt Holmström toivoo EU:lta kevyempää byrokratiaa ja vähemmän sääntelyä. Viime aikoina EU on alkanut kääntyä tähän suuntaan.</p>
+                </article>
+            </a>
+        
+            <a href="#">
+                <article class="uutinen">
+                    <img src="https://images.cdn.yle.fi/image/upload/ar_1.5,c_fill,g_faces,h_424,w_636/dpr_2.0/q_auto:eco/f_auto/fl_lossy/v1764059527/39-15588666925696996580" alt="Jacob Grandison">
+                    <h2>Jacob Grandison ei voi olla Susijengissä – näin Lassi Tuovi kommentoi kohuttua poissaoloa</h2>
+                    <p>Susijengin päävalmentaja Lassi Tuovi avasi Jacob Grandisonin tilannetta.</p>
+                </article>
+            </a>
+        
+            <a href="#">
+                <article class="uutinen">
+                    <img src="https://images.cdn.yle.fi/image/upload/ar_1.4211695040710586,c_fill,g_faces,h_447,w_636/dpr_2.0/q_auto:eco/f_auto/fl_lossy/v1631279391/39-852579613b58de893f3" alt="Kampin kappeli">
+                    <h2>Turistien suosima nähtävyys Helsingin Kampissa aiotaan myydä – syynä massiiviset kulut</h2>
+                    <p>Yhteinen kirkkoneuvosto päättää Kampin kappelin myynnistä lopullisesti torstaina. Sen sijaan aiemmin myytäväksi aiottu Suomenlinnan kirkko säilyy kirkollisessa käytössä.</p>
+                </article>
+            </a>
+        </section>
+    </main>
+
+    <noscript>You need to enable JavaScript to view the full site.</noscript>
+</body>
+</html>
