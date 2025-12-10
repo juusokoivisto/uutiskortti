@@ -12,7 +12,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Lexend+Deca:wght@100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
-    <script src="index.js" defer></script>
+    <script src="dark_mode.js" defer></script>
     <title>Uutiskortti</title>
 </head>
 <body class="light-theme">
@@ -24,6 +24,8 @@
     </script>
     <header>
         <nav aria-label="Primary navigation">
+            <button id="loginButton" aria-label="Login button" onclick="location.href='/login.php'">Kirjaudu</button>
+            <button id="createArticleButton" aria-label="Crete article button" onclick="location.href='/new_article.php'">Uusi uutinen</button>
             <button id="darkModeToggle" aria-label="Toggle dark mode">
                 <img id="darkModeToggle-icon" src="assets/dark_mode.svg" alt="" width="32" height="32">
             </button>
@@ -32,6 +34,8 @@
 
     <main>
         <section class="uutiset">
+            <?php require_once "get_news_cards.php"; ?>
+            <!--
             <a href="#">
                 <article class="uutinen">
                     <img src="https://images.cdn.yle.fi/image/upload/ar_1.4998075,c_fill,g_faces,h_424,w_636/dpr_2.0/q_auto:eco/f_auto/fl_lossy/v1637854842/39-884230619fae59d18cc" alt="Ralf Rangick">
@@ -39,7 +43,7 @@
                     <p>Manchester United tiedotti maanantaina Ralf Rangnickin aloittavan seuran uutena managerina. Ole Gunnar Solskjärin korvaava saksalainen on usean nykyisen huippuvalmentajan esikuva ja pelitapaprofessori.</p>
                 </article>
             </a>
-        
+
             <a href="#">
                 <article class="uutinen">
                     <img src="https://images.cdn.yle.fi/image/upload/ar_1.5,c_fill,g_faces,h_424,w_636/dpr_2.0/q_auto:eco/f_auto/fl_lossy/v1763893681/39-15580906922d8886b11d" alt="Bengt Holmström">
@@ -63,6 +67,7 @@
                     <p>Yhteinen kirkkoneuvosto päättää Kampin kappelin myynnistä lopullisesti torstaina. Sen sijaan aiemmin myytäväksi aiottu Suomenlinnan kirkko säilyy kirkollisessa käytössä.</p>
                 </article>
             </a>
+            -->
         </section>
     </main>
 
