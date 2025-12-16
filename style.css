@@ -3,10 +3,12 @@
     --white: #ffffff;
     --black: #000000;
     --uutinen: #252525;
+}
 
-    * {
-        color: var(--fontColor);
-    }
+* {
+    color: var(--fontColor);
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
 }
 
 body {
@@ -32,6 +34,23 @@ header {
     z-index: 999;
 }
 
+header nav {
+    display: flex;
+    align-items: center;   
+    margin: 10px;       
+    gap: 10px;      
+    width: 100%; 
+}
+
+nav button {
+    background-color: transparent;
+
+    color: var(--fontColor);
+    border: 0px transparent;
+
+    cursor: pointer;
+}
+
 .justify-end {
     justify-content: flex-end; 
 }
@@ -50,8 +69,7 @@ header {
 
 .uutiset {
     column-width: 350px;
-    column-gap: 5px;
-
+    column-gap: 10px;   
     padding: 5px;
 }
 
@@ -63,8 +81,9 @@ a {
 .uutinen {
     background-color: var(--uutinenbg);
     display: inline-block;
-
-    margin-bottom: 5px;
+    width: 100%;          
+    margin-bottom: 10px;  
+    overflow: hidden;
 }
 
 .uutinen:hover {
@@ -73,15 +92,64 @@ a {
 
 img {
     width: 100%;
+    display: block;
 }
 
+
 h2, p {
-    font-family: 'Montserrat', sans-serif;
     padding-left: 10px;
     padding-right: 10px; 
 }
 
 #darkModeToggle {
-    all: unset;
+    background: none;
+    border: none;
+    padding: 0;
     cursor: pointer;
+    margin-left: auto;
+}
+
+.previewImage {
+    max-width: 300px;
+    width: 100%;
+    height: auto;
+}
+
+#loginFormParent {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    height: calc(100vh - 50px);
+    width: 100%;
+}
+
+.loginForm {
+    background-color: var(--uutinenbg);
+    border: 1px solid black;
+    padding: 16px; 
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.loginForm input[type="text"],
+.loginForm input[type="password"] {
+    background-color: var(--uutinenbg);
+    color: var(--fontColor); 
+    border: 1px solid var(--fontColor);
+    padding: 8px;
+}
+
+.loginForm input[type="submit"] {
+    background-color: var(--fontColor);
+    color: var(--uutinenbg);
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    transition: opacity 0.2s;
+}
+
+.warning {
+    color: red;
 }

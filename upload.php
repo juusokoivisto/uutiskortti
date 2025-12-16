@@ -21,11 +21,20 @@ $fileActualExt =    strtolower(end($fileExt));
 
 $allowed =          array("jpg", "png", "jpeg");
 
+$directory = "images/";
+
 if(in_array($fileActualExt, $allowed)) {
     if($fileError === 0) {
         if($fileSize < 5000000) {
             $fileNameNew = $random.".".$fileActualExt;
-            $fileDestination = "images/".$fileNameNew;
+            $fileDestination = $directory.$fileNameNew;
+            
+            if (!is_dir($directory)) {
+                if (!mkdir($directory, 0755, true)) {
+                    exit('Failed to create directory');
+                }
+            }
+            
             move_uploaded_file($fileTmpName, $fileDestination);
 
             $sql = "INSERT INTO uutinen (otsikko, teksti, kuva, kategoria) VALUES (:otsikko, :teksti, :fileNameNew, 3)";
