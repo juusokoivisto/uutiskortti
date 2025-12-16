@@ -1,5 +1,6 @@
 <header>
     <nav aria-label="Primary navigation">
+        <button id="homeButton" aria-label="Home button" onclick="location.href='/index.php'">Uutiset</button>
         <?php if(!isset($_SESSION["tunnus"])):?>
             <button id="loginButton" aria-label="Login button" onclick="location.href='/login.php'">Kirjaudu</button>
         <?php else: ?>

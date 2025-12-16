@@ -46,5 +46,23 @@ if(!isset($_SESSION["tunnus"])) {
             <?php endif; ?>
         </div>
     </main>
+
+    <script>
+        (function() {
+            const storedTheme = localStorage.getItem("darkMode");
+            
+            if (storedTheme === "true") {
+                document.body.classList.toggle("dark-theme");
+                document.addEventListener("DOMContentLoaded", function() {
+                    const darkModeIcon = document.getElementById("darkModeToggle-icon");
+                    if (darkModeIcon) {
+                        darkModeIcon.src = "assets/light_mode.svg";
+                    }
+                });
+            }
+        })();
+    </script>
+
+    <noscript>You need to enable JavaScript to view the full site.</noscript>
 </body>
 </html>

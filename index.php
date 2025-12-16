@@ -13,12 +13,8 @@ session_start();
     <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Lexend+Deca:wght@100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
     <script src="js/dark_mode.js" defer></script>
     <title>Uutiskortti</title>
-
-    <script>
-        const darkMode = localStorage.getItem("darkMode") === "true";
-        if (darkMode) document.documentElement.classList.add("dark-theme");
-    </script>
 </head>
+
 <body class="light-theme">
     <?php require_once "header.php"; ?>
 
@@ -27,6 +23,22 @@ session_start();
             <?php require_once "get_news_cards.php"; ?>
         </section>
     </main>
+
+    <script>
+        (function() {
+            const storedTheme = localStorage.getItem("darkMode");
+            
+            if (storedTheme === "true") {
+                document.body.classList.toggle("dark-theme");
+                document.addEventListener("DOMContentLoaded", function() {
+                    const darkModeIcon = document.getElementById("darkModeToggle-icon");
+                    if (darkModeIcon) {
+                        darkModeIcon.src = "assets/light_mode.svg";
+                    }
+                });
+            }
+        })();
+    </script>
 
     <noscript>You need to enable JavaScript to view the full site.</noscript>
 </body>
